@@ -3,3 +3,6 @@ IDE: Visual Studio Code
 Extensions:
     - PHP Intelephense v1.10.4 (https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
     - PHP DocBlocker v2.7.0 (https://marketplace.visualstudio.com/items?itemName=neilbrayfield.php-docblocker)
+
+Resources:
+    - Determining Plugin and Content Directories (https://developer.wordpress.org/plugins/plugin-basics/determining-plugin-and-content-directories/)
