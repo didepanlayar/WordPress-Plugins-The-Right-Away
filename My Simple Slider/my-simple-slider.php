@@ -32,3 +32,15 @@ along with My Simple Slider. If not, see https://www.gnu.org/licenses/gpl-2.0.ht
 if( ! defined( 'ABSPATH' ) ) {
     exit;
 }
+
+if( ! class_exists( 'MS_Slider' ) ) {
+    class MS_Slider {
+        function __construct() {
+
+        }
+    }
+}
+
+if( class_exists( 'MS_slider' ) ) {
+    $ms_slider = new MS_Slider();
+}
