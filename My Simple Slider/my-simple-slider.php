@@ -44,9 +44,25 @@ if( ! class_exists( 'MS_Slider' ) ) {
             define( 'MS_SLIDER_URL', plugin_dir_url( __FILE__ ) );
             define( 'MS_SLIDER_VERSION', '1.0.0' );
         }
+
+        public static function activate() {
+            update_option( 'rewrite_rules', '' );
+        }
+
+        public static function deactivate() {
+            flush_rewrite_rules();
+        }
+
+        public static function uninstall() {
+
+        }
     }
 }
 
 if( class_exists( 'MS_slider' ) ) {
+    register_activation_hook( __FILE__, array( 'MS_Slider', 'activate' ) );
+    register_deactivation_hook( __FILE__, array( 'MS_Slider', 'deactivate' ) );
+    register_uninstall_hook( __FILE__, array( 'MS_Slider', 'uninstall' ) );
+
     $ms_slider = new MS_Slider();
 }

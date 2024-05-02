@@ -6,3 +6,4 @@ Extensions:
 
 Resources:
     - Determining Plugin and Content Directories (https://developer.wordpress.org/plugins/plugin-basics/determining-plugin-and-content-directories/)
+    - Uninstall Methods (https://developer.wordpress.org/plugins/plugin-basics/uninstall-methods/)
