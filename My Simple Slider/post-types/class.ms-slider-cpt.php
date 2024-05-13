@@ -17,7 +17,7 @@ if( ! class_exists( 'MS_Slider_Post_Type' ) ) {
                         'singular_name' => 'Slider'
                     ),
                     'public'                => true,
-                    'support'               => array( 'title', 'editor', 'thumbnail' ),
+                    'supports'              => array( 'title', 'editor', 'thumbnail' ),
                     'hierarchical'          => false,
                     'show_ui'               => true,
                     'show_in_menu'          => true,
