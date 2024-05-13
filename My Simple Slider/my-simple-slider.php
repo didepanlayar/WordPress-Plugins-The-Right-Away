@@ -37,6 +37,9 @@ if( ! class_exists( 'MS_Slider' ) ) {
     class MS_Slider {
         function __construct() {
             $this->define_constants();
+
+            require_once( MS_SLIDER_PATH . 'post-types/class.ms-slider-cpt.php' );
+            $MS_Slider_Post_Type = new MS_Slider_Post_Type();
         }
 
         public function define_constants() {

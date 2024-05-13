@@ -7,3 +7,5 @@ Extensions:
 Resources:
     - Determining Plugin and Content Directories (https://developer.wordpress.org/plugins/plugin-basics/determining-plugin-and-content-directories/)
     - Uninstall Methods (https://developer.wordpress.org/plugins/plugin-basics/uninstall-methods/)
+    - Register Post Type (https://developer.wordpress.org/reference/functions/register_post_type/)
+    - Dashicons (https://developer.wordpress.org/resource/dashicons/)
