@@ -54,6 +54,7 @@ if( ! class_exists( 'MS_Slider' ) ) {
 
         public static function deactivate() {
             flush_rewrite_rules();
+            unregister_post_type( 'ms-slider' );
         }
 
         public static function uninstall() {
