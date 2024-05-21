@@ -9,3 +9,4 @@ Resources:
     - Uninstall Methods (https://developer.wordpress.org/plugins/plugin-basics/uninstall-methods/)
     - Register Post Type (https://developer.wordpress.org/reference/functions/register_post_type/)
     - Dashicons (https://developer.wordpress.org/resource/dashicons/)
+    - Metadata API Support to Custom Objects in WordPress (https://www.engagewp.com/adding-metadata-api-support-to-custom-objects-in-wordpress-the-complete-guide/)
