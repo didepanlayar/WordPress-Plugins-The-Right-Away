@@ -48,7 +48,7 @@ if( ! class_exists( 'MS_Slider_Post_Type' ) ) {
         }
 
         public function add_inner_meta_boxes( $post ) {
-
+            require_once( MS_SLIDER_PATH . 'views/ms-slider_metabox.php' );
         }
     }
 }
