@@ -5,6 +5,7 @@ Extensions:
     - PHP DocBlocker v2.7.0 (https://marketplace.visualstudio.com/items?itemName=neilbrayfield.php-docblocker)
 
 Resources:
+    - Materials (https://github.com/marceloquinze/Materials---Plugin-Course-Udemy-)
     - Determining Plugin and Content Directories (https://developer.wordpress.org/plugins/plugin-basics/determining-plugin-and-content-directories/)
     - Uninstall Methods (https://developer.wordpress.org/plugins/plugin-basics/uninstall-methods/)
     - Register Post Type (https://developer.wordpress.org/reference/functions/register_post_type/)
