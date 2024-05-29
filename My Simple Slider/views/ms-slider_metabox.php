@@ -7,6 +7,7 @@ $link_url   = get_post_meta( $post->ID, 'ms_slider_link_url',  true );
 
 ?>
 <table class="form-table ms-slider-metabox">
+    <input type="hidden" name="ms_slider_nonce" value="<?php echo wp_create_nonce( 'ms_slider_nonce' ); ?>">
     <tr>
         <th>
             <label for="ms_slider_link_text">Link Text</label>

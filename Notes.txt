@@ -11,3 +11,10 @@ Resources:
     - Register Post Type (https://developer.wordpress.org/reference/functions/register_post_type/)
     - Dashicons (https://developer.wordpress.org/resource/dashicons/)
     - Metadata API Support to Custom Objects in WordPress (https://www.engagewp.com/adding-metadata-api-support-to-custom-objects-in-wordpress-the-complete-guide/)
+    - current_user_can Function (https://developer.wordpress.org/reference/functions/current_user_can/)
+    - Roles and Capabilities (https://wordpress.org/documentation/article/roles-and-capabilities/)
+    - Create Custom Field (https://www.taniarascia.com/wordpress-part-three-custom-fields-and-metaboxes/#create-custom-fields)
+    - WordPress Meta Boxes: a Comprehensive Developer’s Guide (https://themefoundation.com/wordpress-meta-boxes-guide/)
+
+Dashboard:
+    - Add some slide (5) in the Sliders Menu
