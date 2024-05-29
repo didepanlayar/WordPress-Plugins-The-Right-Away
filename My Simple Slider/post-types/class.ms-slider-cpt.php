@@ -6,6 +6,9 @@ if( ! class_exists( 'MS_Slider_Post_Type' ) ) {
             add_action( 'init', array( $this, 'create_post_type' ) );
             add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
             add_action( 'save_post', array( $this, 'save_post' ), 10, 2 );
+            add_filter( 'manage_ms-slider_posts_columns', array( $this, 'ms_slider_cpt_columns' ) );
+            add_action( 'manage_ms-slider_posts_custom_column', array( $this, 'ms_slider_custom_columns' ), 10, 2 );
+            add_filter( 'manage_edit-ms-slider_sortable_columns', array( $this, 'ms_slider_sortable_colums' ) );
         }
 
         function create_post_type() {
@@ -35,6 +38,28 @@ if( ! class_exists( 'MS_Slider_Post_Type' ) ) {
                     // 'register_meta_box_cb'  => array( $this, 'add_meta_boxes' )
                 )
             );
+        }
+
+        public function ms_slider_cpt_columns( $columns ) {
+            $columns['ms_slider_link_text']     = esc_html__( 'Link Text', 'ms-slider' );
+            $columns['ms_slider_link_url']      = esc_html__( 'Link URL', 'ms-slider' );
+            return $columns;
+        }
+
+        public function ms_slider_custom_columns( $column, $post_id ) {
+            switch( $column ) {
+                case 'ms_slider_link_text':
+                    echo esc_html( get_post_meta( $post_id, 'ms_slider_link_text', true ) );
+                break;
+                case 'ms_slider_link_url':
+                    echo esc_url( get_post_meta( $post_id, 'ms_slider_link_url', true ) );
+                break;
+            }
+        }
+
+        public function ms_slider_sortable_colums( $columns ) {
+            $columns['ms_slider_link_text']     = 'ms_slider_link_text';
+            return $columns;
         }
 
         public function add_meta_boxes() {
