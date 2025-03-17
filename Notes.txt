@@ -16,6 +16,7 @@ Resources:
     - Create Custom Field (https://www.taniarascia.com/wordpress-part-three-custom-fields-and-metaboxes/#create-custom-fields)
     - WordPress Meta Boxes: a Comprehensive Developer’s Guide (https://themefoundation.com/wordpress-meta-boxes-guide/)
     - Customizing Admin Columns In WordPress (https://www.smashingmagazine.com/2017/12/customizing-admin-columns-wordpress/)
+    - Role and Capabilities (https://wordpress.org/documentation/article/roles-and-capabilities/)
 
 Dashboard:
     - Add some slide (5) in the Sliders Menu

@@ -38,6 +38,8 @@ if( ! class_exists( 'MS_Slider' ) ) {
         function __construct() {
             $this->define_constants();
 
+            add_action( 'admin_menu', array( $this, 'add_menu' ) );
+
             require_once( MS_SLIDER_PATH . 'post-types/class.ms-slider-cpt.php' );
             $MS_Slider_Post_Type = new MS_Slider_Post_Type();
         }
@@ -59,6 +61,41 @@ if( ! class_exists( 'MS_Slider' ) ) {
 
         public static function uninstall() {
 
+        }
+
+        public function add_menu() {
+            add_menu_page(
+                'Slider Options',
+                'Sliders',
+                'manage_options',
+                'ms-slider-setting',
+                array( $this, 'ms_slider_settings_page' ),
+                'dashicons-images-alt2'
+            );
+
+            add_submenu_page(
+                'ms-slider-setting',
+                'Manage Slides',
+                'Manage Slides',
+                'manage_options',
+                'edit.php?post_type=ms-slider',
+                null,
+                null
+            );
+
+            add_submenu_page(
+                'ms-slider-setting',
+                'Add New Slide',
+                'Add New Slide',
+                'manage_options',
+                'post-new.php?post_type=ms-slider',
+                null,
+                null
+            );
+        }
+
+        public function ms_slider_settings_page() {
+            echo "Slider Setting";
         }
     }
 }
