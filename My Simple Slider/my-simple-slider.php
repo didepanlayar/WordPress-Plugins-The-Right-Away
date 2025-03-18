@@ -95,7 +95,7 @@ if( ! class_exists( 'MS_Slider' ) ) {
         }
 
         public function ms_slider_settings_page() {
-            echo "Slider Setting";
+            require( MS_SLIDER_PATH . 'views/settings-page.php' );
         }
     }
 }
