@@ -42,6 +42,9 @@ if( ! class_exists( 'MS_Slider' ) ) {
 
             require_once( MS_SLIDER_PATH . 'post-types/class.ms-slider-cpt.php' );
             $MS_Slider_Post_Type = new MS_Slider_Post_Type();
+
+            require_once( MS_SLIDER_PATH . 'class.ms-slider-settings.php' );
+            $MS_Slider_settings = new MS_Slider_Settings();
         }
 
         public function define_constants() {

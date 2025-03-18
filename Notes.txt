@@ -17,6 +17,7 @@ Resources:
     - WordPress Meta Boxes: a Comprehensive Developer’s Guide (https://themefoundation.com/wordpress-meta-boxes-guide/)
     - Customizing Admin Columns In WordPress (https://www.smashingmagazine.com/2017/12/customizing-admin-columns-wordpress/)
     - Role and Capabilities (https://wordpress.org/documentation/article/roles-and-capabilities/)
+    - Settings API Explained (http://presscoders.com/wordpress-settings-api-explained/)
 
 Dashboard:
     - Add some slide (5) in the Sliders Menu
