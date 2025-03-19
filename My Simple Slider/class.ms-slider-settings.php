@@ -10,7 +10,7 @@ if( ! class_exists( 'MS_Slider_Settings' ) ) {
         }
 
         public function admin_init() {
-            register_setting( 'ms_slider_group', 'ms_slider_options' );
+            register_setting( 'ms_slider_group', 'ms_slider_options', array( $this, 'ms_slider_validate' ) );
             
             add_settings_section(
                 'ms_slider_main_section',
@@ -95,6 +95,24 @@ if( ! class_exists( 'MS_Slider_Settings' ) ) {
                     <?php endforeach; ?>
                 </select>
             <?php
+        }
+
+        public function ms_slider_validate( $input ) {
+            $new_input = array();
+            foreach( $input as $key => $value ) {
+                switch( $key ) {
+                    case 'ms_slider_title':
+                        if( empty( $value ) ) {
+                            $value = 'Please, type some text.';
+                        }
+                        $new_input[$key] = sanitize_text_field( $value );
+                    break;
+                    default:
+                        $new_input[$key] = sanitize_text_field( $value );
+                    break;
+                }
+            }
+            return $new_input;
         }
     }
 }

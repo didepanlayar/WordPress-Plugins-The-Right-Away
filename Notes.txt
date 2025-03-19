@@ -18,6 +18,7 @@ Resources:
     - Customizing Admin Columns In WordPress (https://www.smashingmagazine.com/2017/12/customizing-admin-columns-wordpress/)
     - Role and Capabilities (https://wordpress.org/documentation/article/roles-and-capabilities/)
     - Settings API Explained (http://presscoders.com/wordpress-settings-api-explained/)
+    - Sanitizing Multiple Values with the WordPress Settings API (https://tommcfarlin.com/sanitizing-values-wordpress-settings-api/)
 
 Dashboard:
     - Add some slide (5) in the Sliders Menu
