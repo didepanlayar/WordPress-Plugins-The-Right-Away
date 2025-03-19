@@ -39,7 +39,10 @@ if( ! class_exists( 'MS_Slider_Settings' ) ) {
                 'Slider Title',
                 array( $this, 'ms_slider_title_callback' ),
                 'ms_slider_page_2',
-                'ms_slider_second_section'
+                'ms_slider_second_section',
+                array(
+                    'label_for' => 'ms_slider_title'
+                )
             );
 
             add_settings_field(
@@ -47,7 +50,10 @@ if( ! class_exists( 'MS_Slider_Settings' ) ) {
                 'Display Bullets',
                 array( $this, 'ms_slider_bullets_callback' ),
                 'ms_slider_page_2',
-                'ms_slider_second_section'
+                'ms_slider_second_section',
+                array(
+                    'label_for' => 'ms_slider_bullets'
+                )
             );
 
             add_settings_field(
@@ -55,7 +61,14 @@ if( ! class_exists( 'MS_Slider_Settings' ) ) {
                 'Slider Style',
                 array( $this, 'ms_slider_style_callback' ),
                 'ms_slider_page_2',
-                'ms_slider_second_section'
+                'ms_slider_second_section',
+                array(
+                    'items' => array(
+                        'style-1',
+                        'style-2'
+                    ),
+                    'label_for' => 'ms_slider_style'
+                )
             );
         }
 
@@ -63,22 +76,23 @@ if( ! class_exists( 'MS_Slider_Settings' ) ) {
             ?> <span>Use the shortcode [ms_slider] to display the slider in any page, post or widget.</span> <?php
         }
 
-        public function ms_slider_title_callback() {
+        public function ms_slider_title_callback( $arg ) {
             ?> <input type="text" name="ms_slider_options[ms_slider_title]" id="ms_slider_title" value="<?php echo isset( self::$options['ms_slider_title'] ) ? esc_html( self::$options['ms_slider_title'] ) : ''; ?>"> <?php
         }
 
-        public function ms_slider_bullets_callback() {
+        public function ms_slider_bullets_callback( $arg ) {
             ?>
                 <input type="checkbox" name="ms_slider_options[ms_slider_bullets]" id="ms_slider_bullets" value="1" <?php if( isset( self::$options['ms_slider_bullets'] ) ) { checked( "1", self::$options['ms_slider_bullets'], true ); } ?>>
                 <label for="ms_slider_bullets">Wheter to dispay bullets or not.</label>
             <?php
         }
 
-        public function ms_slider_style_callback() {
+        public function ms_slider_style_callback( $arg ) {
             ?>
                 <select  id="ms_slider_style" name="ms_slider_options[ms_slider_style]">
-                    <option value="style-1" <?php isset( self::$options['ms_slider_style'] ) ? selected( 'style-1', self::$options['ms_slider_style'], true ) : ''; ?>>Style-1</option>
-                    <option value="style-2" <?php isset( self::$options['ms_slider_style'] ) ? selected( 'style-2', self::$options['ms_slider_style'], true ) : ''; ?>>Style-2</option>
+                    <?php foreach( $arg['items'] as $item ) : ?>
+                        <option value="<?php echo esc_attr( $item ); ?>" <?php isset( self::$options['ms_slider_style'] ) ? selected( $item, self::$options['ms_slider_style'], true ) : ''; ?>><?php echo esc_html( ucfirst( $item ) ); ?></option>
+                    <?php endforeach; ?>
                 </select>
             <?php
         }
