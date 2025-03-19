@@ -98,6 +98,16 @@ if( ! class_exists( 'MS_Slider' ) ) {
         }
 
         public function ms_slider_settings_page() {
+            if( ! current_user_can( 'manage_options' ) ) {
+                return;
+            }
+
+            if( isset( $_GET['settings-updated'] ) ) {
+                add_settings_error( 'ms_slider_options', 'ms_slider_message', 'Settings Saved', 'success' );
+            }
+
+            settings_errors( 'ms_slider_options' );
+
             require( MS_SLIDER_PATH . 'views/settings-page.php' );
         }
     }

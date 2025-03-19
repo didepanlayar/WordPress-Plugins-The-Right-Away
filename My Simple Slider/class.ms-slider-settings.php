@@ -103,6 +103,7 @@ if( ! class_exists( 'MS_Slider_Settings' ) ) {
                 switch( $key ) {
                     case 'ms_slider_title':
                         if( empty( $value ) ) {
+                            add_settings_error( 'ms_slider_options', 'ms_slider_message', 'The title field can not be left empty', 'error' );
                             $value = 'Please, type some text.';
                         }
                         $new_input[$key] = sanitize_text_field( $value );
