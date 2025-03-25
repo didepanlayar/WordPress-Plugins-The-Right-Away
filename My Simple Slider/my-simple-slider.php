@@ -45,6 +45,9 @@ if( ! class_exists( 'MS_Slider' ) ) {
 
             require_once( MS_SLIDER_PATH . 'class.ms-slider-settings.php' );
             $MS_Slider_settings = new MS_Slider_Settings();
+
+            require_once( MS_SLIDER_PATH . 'shortcodes/class.ms-slider-shortcode.php' );
+            $MS_Slider_Shortcode = new MS_Slider_Shortcode();
         }
 
         public function define_constants() {
